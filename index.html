@@ -42,14 +42,16 @@
           $16.00 <span class="month">/month</span>
         </p>
       </div>
-      <input
-        type="range"
-        min="0"
-        max="4"
-        value="2"
-        class="range-input"
-        id="range-input"
-      />
+      <div class="range-slider">
+        <input
+          type="range"
+          min="0"
+          max="4"
+          value="2"
+          class="range-input"
+          id="price-slider"
+        />
+      </div>
       <p class="amount-output mobile">
         $16.00 <span class="month">/month</span>
       </p>
@@ -58,15 +60,21 @@
 
         <!-- Rounded switch -->
         <label class="switch">
-          <input type="checkbox" name="billing" id="checkbox" />
-          <span class="slider round"></span>
+          <input type="checkbox" name="billing" id="billing" />
+          <span class="toggle-slider"></span>
         </label>
+        <!-- <input type="checkbox" class="checkbox" id="checkbox" />
+
+        <label for="checkbox" class="label">
+          <div class="ball"></div>
+        </label> -->
         <div class="span-discount">
           <p class="billing">Yearly Billing</p>
           <span class="discount minus">-25%</span>
           <span class="discount percentage">-25% discount</span>
         </div>
       </div>
+
       <hr />
       <div class="button-para-container">
         <div class="list-para">

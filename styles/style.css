@@ -44,6 +44,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: url(../images/bg-pattern.svg);
+  background-size: auto 400px;
+  background-position: top;
+  background-repeat: no-repeat;
 }
 
 /* main title and bg */
@@ -91,11 +95,53 @@ body {
   margin-bottom: 2rem;
 }
 
-.range-input {
-  background-color: var(--clr-Strong-Cyan-Slider-Backround);
-  margin-bottom: 1.75rem;
-  width: 100%;
+/* *********** */
+/* range input start*/
+/* *********** */
+.range-slider {
+  margin-bottom: 2rem;
 }
+
+input#price-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  border-radius: 5px;
+  height: 10px;
+  background: linear-gradient(
+    to right,
+    hsl(174, 77%, 80%) 0%,
+    hsl(174, 77%, 80%) 50%,
+    hsl(224, 65%, 95%) 0%,
+    hsl(224, 65%, 95%) 100%
+  );
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+input#price-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: hsl(174, 86%, 45%);
+  background-image: url(../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 7px 10px 4px rgba(16, 213, 194, 0.2);
+}
+
+input#price-slider::-webkit-slider-thumb:hover {
+  background-color: hsl(174, 77%, 80%);
+  transition: all 0.3s;
+}
+
+/* *********** */
+/* range input end*/
+/* *********** */
+
+/* *********** */
+/* TOGGLE start */
+/* *********** */
 
 .amount-output {
   font-size: 1.75rem;
@@ -116,70 +162,60 @@ body {
   margin-bottom: 0.75rem;
 }
 
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 45px;
-  height: 25px;
-}
+/* Toggle */
 
-/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
-  width: 0;
-  height: 0;
 }
 
-/* The slider */
-.slider {
+.switch {
+  display: inline-block;
+  width: 45px;
+  height: 20px;
+  position: relative;
+}
+
+.toggle-slider {
   position: absolute;
-  cursor: pointer;
+  background-color: hsl(223, 50%, 87%);
   top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  border-radius: 25px;
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 
-.slider:before {
-  position: absolute;
+.toggle-slider::before {
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  position: absolute;
+  background-color: #fff;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  left: 3px;
+  top: 3px;
+  transition: all 0.4s ease-in-out;
 }
 
-input:checked + .slider {
-  background-color: #2196f3;
+input:checked + .toggle-slider {
+  background-color: #10d5c2;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+input:focus + .toggle-slider {
+  box-shadow: 0 0 1px #10d5c2;
 }
 
-input:checked + .slider:before {
+.switch input:checked + .toggle-slider:before {
+  transform: translateX(25px);
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
-  transform: translateX(26px);
 }
 
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-}
+/* *********** */
+/* TOGGLE end */
+/* *********** */
 
 .billing {
   font-size: 0.75rem;
@@ -199,6 +235,10 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .minus {
@@ -233,23 +273,30 @@ input:checked + .slider:before {
 
 .btn {
   background-color: var(--clr-Dark-Desaturated-Blue-Background);
-  color: var(--clr-Very-Pale-Blue-Main-Background);
+  color: var(--clr-Pale-Blue-CTA-Text);
   font-size: 0.8rem;
   font-weight: bold;
   padding: 0.75rem 1.75rem;
   border: none;
   border-radius: 25px;
   transition: all 0.4s;
+  box-shadow: 0 5px 10px var(--clr-Dark-Desaturated-Blue-Background);
   cursor: pointer;
 }
 .btn:hover {
   background-color: #28408d;
-  color: var(--clr-Pale-Blue-CTA-Text);
+  color: white;
   transition: all 0.4s;
 }
 
 /* media quoery */
 @media screen and (min-width: 520px) {
+  body {
+    background-image: url(../images/bg-pattern.svg);
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
   .price-card {
     width: 450px;
   }
