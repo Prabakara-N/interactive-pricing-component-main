@@ -144,14 +144,19 @@ input#price-slider::-webkit-slider-thumb:hover {
 /* *********** */
 
 .amount-output {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: bold;
   color: var(--clr-Dark-Desaturated-Blue-Background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
 }
 
 .month {
   font-size: 0.8rem;
   color: var(--clr-Grayish-Blue-Text);
+  margin-top: -16px;
 }
 
 .toggle-container {
@@ -162,6 +167,7 @@ input#price-slider::-webkit-slider-thumb:hover {
   margin-bottom: 0.75rem;
 }
 
+/* ******* */
 /* Toggle */
 
 .switch input {
@@ -283,6 +289,7 @@ hr {
   box-shadow: 0 5px 10px var(--clr-Dark-Desaturated-Blue-Background);
   cursor: pointer;
 }
+
 .btn:hover {
   background-color: #28408d;
   color: white;
@@ -290,7 +297,7 @@ hr {
 }
 
 /* media quoery */
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 500px) {
   body {
     background-image: url(../images/bg-pattern.svg);
     background-size: 100%;
@@ -312,10 +319,6 @@ hr {
   .views-output {
     font-size: 0.8rem;
     margin-top: 0.5rem;
-  }
-
-  .amount-output {
-    font-size: 2rem;
   }
 
   .minus {
