@@ -25,7 +25,69 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <input type="range" min="2" max="6" />
+    <!-- title & para -->
+    <div class="bg-img">
+      <h1 class="main-title">Simple, traffic-based pricing</h1>
+      <p class="main-para">
+        Sign-up for our 30-day trial. No credit card required.
+      </p>
+    </div>
+
+    <!--main card start  -->
+
+    <main class="price-card">
+      <div class="desktop-top">
+        <p class="views-output" id="views">100K PAGEVIEWS</p>
+        <p class="amount-output desktop" id="dollar">
+          $16.00 <span class="month">/month</span>
+        </p>
+      </div>
+      <input
+        type="range"
+        min="0"
+        max="4"
+        value="2"
+        class="range-input"
+        id="range-input"
+      />
+      <p class="amount-output mobile">
+        $16.00 <span class="month">/month</span>
+      </p>
+      <div class="toggle-container">
+        <p class="billing">Monthly Billing</p>
+
+        <!-- Rounded switch -->
+        <label class="switch">
+          <input type="checkbox" name="billing" id="checkbox" />
+          <span class="slider round"></span>
+        </label>
+        <div class="span-discount">
+          <p class="billing">Yearly Billing</p>
+          <span class="discount minus">-25%</span>
+          <span class="discount percentage">-25% discount</span>
+        </div>
+      </div>
+      <hr />
+      <div class="button-para-container">
+        <div class="list-para">
+          <div class="benefits-para">
+            <img src="./images/icon-check.svg" alt="check" class="check-img" />
+            <p class="check-para">Unlimited websites</p>
+          </div>
+          <div class="benefits-para">
+            <img src="./images/icon-check.svg" alt="check" class="check-img" />
+            <p class="check-para">100% data ownership</p>
+          </div>
+          <div class="benefits-para">
+            <img src="./images/icon-check.svg" alt="check" class="check-img" />
+            <p class="check-para">Email reports</p>
+          </div>
+        </div>
+        <button class="btn">Start my trial</button>
+      </div>
+    </main>
+
+    <!--main card end  -->
     <!-- Custom JavaScript -->
     <script src="./script/script.js"></script>
   </body>

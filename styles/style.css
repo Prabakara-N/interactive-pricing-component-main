@@ -13,7 +13,7 @@
   --clr-Light-Grayish-Red-Discount-Background: #feece7;
   --clr-Light-Red-Discount-Text: #ff8c66;
   --clr-Pale-Blue-CTA-Text: #bdccff;
-  --clr-White-Pricing-Component-Background: #ffffff;
+  --clr-White-Background: #ffffff;
   --clr-Very-Pale-Blue-Main-Background: #fafbff;
   --clr-Light-Grayish-Blue-Empty-Slider-Bar: #eaeefb;
   --clr-Light-Grayish-Blue-Toggle-Background: #cdd7ee;
@@ -21,11 +21,6 @@
   --clr-Dark-Desaturated-Blue-Background: #293356;
   --box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25),
     -2px -2px 2px rgba(0, 0, 0, 0.25);
-}
-
-a {
-  text-decoration: none;
-  box-shadow: var;
 }
 
 li {
@@ -43,5 +38,266 @@ html {
 
 body {
   font-family: "Manrope", sans-serif;
-  background-color: var(--clr-white);
+  background-color: var(--clr-Very-Pale-Blue-Main-Background);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* main title and bg */
+
+.bg-img {
+  background-image: url(../images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 9rem;
+  text-align: center;
+  padding: 1.75rem;
+}
+
+.main-title {
+  color: var(--clr-Dark-Desaturated-Blue-Background);
+  font-size: 1.5rem;
+}
+
+.main-para {
+  color: var(--clr-Grayish-Blue-Text);
+  font-size: 15px;
+}
+
+/* main card */
+
+.price-card {
+  width: 92%;
+  padding: 1.75rem;
+  margin: 3rem auto;
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.desktop {
+  display: none;
+}
+
+.views-output {
+  color: var(--clr-Grayish-Blue-Text);
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.range-input {
+  background-color: var(--clr-Strong-Cyan-Slider-Backround);
+  margin-bottom: 1.75rem;
+  width: 100%;
+}
+
+.amount-output {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--clr-Dark-Desaturated-Blue-Background);
+}
+
+.month {
+  font-size: 0.8rem;
+  color: var(--clr-Grayish-Blue-Text);
+}
+
+.toggle-container {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 25px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.billing {
+  font-size: 0.75rem;
+  color: var(--clr-Grayish-Blue-Text);
+  margin-top: 7px;
+}
+
+.discount {
+  font-size: 0.6rem;
+  color: var(--clr-Light-Red-Discount-Text);
+  background-color: var(--clr-Light-Grayish-Red-Discount-Background);
+  border-radius: 25px;
+  padding: 3px 5px;
+}
+
+.span-discount {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.minus {
+  display: block;
+}
+
+.percentage {
+  display: none;
+}
+
+.list-para {
+  margin: 1rem auto;
+}
+
+.benefits-para {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.check-para {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: var(--clr-Grayish-Blue-Text);
+}
+
+.check-img {
+  width: 12px;
+  height: 10px;
+}
+
+.btn {
+  background-color: var(--clr-Dark-Desaturated-Blue-Background);
+  color: var(--clr-Very-Pale-Blue-Main-Background);
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0.75rem 1.75rem;
+  border: none;
+  border-radius: 25px;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #28408d;
+  color: var(--clr-Pale-Blue-CTA-Text);
+  transition: all 0.4s;
+}
+
+/* media quoery */
+@media screen and (min-width: 520px) {
+  .price-card {
+    width: 450px;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .views-output {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .amount-output {
+    font-size: 2rem;
+  }
+
+  .minus {
+    display: none;
+  }
+
+  .percentage {
+    display: block;
+  }
+
+  .desktop-top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .percentage {
+    display: block;
+  }
+
+  .button-para-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .benefits-para {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-right: 5rem;
+  }
 }
