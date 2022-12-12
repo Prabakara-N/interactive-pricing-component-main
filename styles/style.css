@@ -131,16 +131,12 @@ input#price-slider::-webkit-slider-thumb {
 }
 
 input#price-slider::-webkit-slider-thumb:hover {
-  background-color: hsl(174, 77%, 80%);
+  background-color: #4ab7ac;
   transition: all 0.3s;
 }
 
 /* *********** */
 /* range input end*/
-/* *********** */
-
-/* *********** */
-/* TOGGLE start */
 /* *********** */
 
 .amount-output {
@@ -167,8 +163,9 @@ input#price-slider::-webkit-slider-thumb:hover {
   margin-bottom: 0.75rem;
 }
 
-/* ******* */
-/* Toggle */
+/* *********** */
+/* TOGGLE start */
+/* *********** */
 
 .switch input {
   opacity: 0;
@@ -229,12 +226,19 @@ input:focus + .toggle-slider {
   margin-top: 7px;
 }
 
+/* js */
+.selected {
+  color: var(--clr-Dark-Desaturated-Blue-Background);
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
 .discount {
   font-size: 0.6rem;
   color: var(--clr-Light-Red-Discount-Text);
   background-color: var(--clr-Light-Grayish-Red-Discount-Background);
   border-radius: 25px;
-  padding: 3px 5px;
+  padding: 4px 7px;
 }
 
 .span-discount {

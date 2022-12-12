@@ -1,6 +1,7 @@
 //elements
 let viewEl = document.getElementById("views");
-let costEl = document.getElementById("dollar");
+let costMobEl = document.getElementById("dollar-mob"); //for mobile
+let costDeskEl = document.getElementById("dollar-desk"); //for desktop
 let sliderEl = document.getElementById("price-slider");
 let toggleEl = document.getElementById("billing");
 
@@ -29,8 +30,12 @@ sliderEl.addEventListener("input", function () {
 toggleEl.addEventListener("change", function () {
   if (isYearly == false) {
     isYearly = true;
+    document.getElementById("yearly").classList.add("selected");
+    document.getElementById("monthly").classList.remove("selected");
   } else {
     isYearly = false;
+    document.getElementById("monthly").classList.add("selected");
+    document.getElementById("yearly").classList.remove("selected");
   }
   updateValue();
 });
@@ -38,8 +43,10 @@ toggleEl.addEventListener("change", function () {
 //functions
 function updateValue() {
   if (isYearly) {
-    costEl.innerHTML = perMonth[sliderEl.value] * 0.75;
+    costDeskEl.innerHTML = perMonth[sliderEl.value] * 0.75;
+    costMobEl.innerHTML = perMonth[sliderEl.value] * 0.75;
   } else {
-    costEl.innerHTML = perMonth[sliderEl.value];
+    costDeskEl.innerHTML = perMonth[sliderEl.value];
+    costMobEl.innerHTML = perMonth[sliderEl.value];
   }
 }

@@ -37,9 +37,9 @@
 
     <main class="price-card">
       <div class="desktop-top">
-        <p class="views-output"><span class="views">100K </span>PAGEVIEWS</p>
+        <p class="views-output"><span id="views">100K </span> PAGEVIEWS</p>
         <div class="amount-output">
-          <p class="desktop">$<span id="dollar">16</span>.00</p>
+          <p class="desktop">$<span id="dollar-desk">16</span>.00</p>
           <p class="month desktop">/month</p>
         </div>
       </div>
@@ -54,24 +54,20 @@
         />
       </div>
       <div class="amount-output">
-        <p class="mobile">$<span id="dollar">16</span>.00</p>
+        <p class="mobile">$<span id="dollar-mob">16</span>.00</p>
         <p class="month mobile">/month</p>
       </div>
       <div class="toggle-container">
-        <p class="billing">Monthly Billing</p>
+        <p class="billing" id="monthly">Monthly Billing</p>
 
-        <!-- Rounded switch -->
+        <!-- toogle -->
         <label class="switch">
           <input type="checkbox" name="billing" id="billing" />
           <span class="toggle-slider"></span>
         </label>
-        <!-- <input type="checkbox" class="checkbox" id="checkbox" />
 
-        <label for="checkbox" class="label">
-          <div class="ball"></div>
-        </label> -->
         <div class="span-discount">
-          <p class="billing">Yearly Billing</p>
+          <p class="billing" id="yearly">Yearly Billing</p>
           <span class="discount minus">-25%</span>
           <span class="discount percentage">-25% discount</span>
         </div>
