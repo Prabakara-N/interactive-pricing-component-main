@@ -5,6 +5,8 @@ let costDeskEl = document.getElementById("dollar-desk"); //for desktop
 let sliderEl = document.getElementById("price-slider");
 let toggleEl = document.getElementById("billing");
 
+const btn = document.getElementById("btn");
+const socialIconEl = document.getElementById("socil-media");
 //global variables
 let pageViews = ["10K", "50K", "100K", "500K", "1M"];
 let perMonth = [8, 12, 16, 24, 36];
@@ -38,6 +40,11 @@ toggleEl.addEventListener("change", function () {
     document.getElementById("yearly").classList.remove("selected");
   }
   updateValue();
+});
+
+//for trial button
+btn.addEventListener("click", function () {
+  socialIconEl.classList.toggle("hidden");
 });
 
 //functions
