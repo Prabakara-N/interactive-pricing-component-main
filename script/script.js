@@ -45,6 +45,8 @@ toggleEl.addEventListener("change", function () {
 //for trial button
 btn.addEventListener("click", function () {
   socialIconEl.classList.toggle("hidden");
+  document.getElementById("monthly").classList.remove("selected");
+  document.getElementById("yearly").classList.remove("selected");
 });
 
 //functions

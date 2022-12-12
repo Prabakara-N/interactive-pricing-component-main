@@ -244,11 +244,12 @@ input:focus + .toggle-slider {
 .span-discount {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
 }
 
 hr {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: none;
 }
 
 .minus {
@@ -323,7 +324,19 @@ hr {
 }
 
 .fa-instagram {
-  color: #e1306c;
+  border-radius: 25%;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #8a3ab9 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  /* Also define standard property for compatibility */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .social:hover {
