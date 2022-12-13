@@ -356,6 +356,15 @@ hr {
     background-position: top;
     background-repeat: no-repeat;
   }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .main-para {
+    font-size: 1rem;
+  }
+
   .price-card {
     width: 450px;
   }
